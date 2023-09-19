@@ -1,0 +1,33 @@
+/*
+string[] fraudulentOrderIDs = new string[3];
+
+fraudulentOrderIDs[0] = "A123";
+fraudulentOrderIDs[1] = "B456";
+fraudulentOrderIDs[2] = "C789";
+// fraudulentOrderIDs[3] = "D000";
+*/
+
+string[] fraudulentOrderIDs = { "A123", "B456", "C789" };
+
+
+Console.WriteLine($"Primeiro: {fraudulentOrderIDs[0]}");
+Console.WriteLine($"Segundo: {fraudulentOrderIDs[1]}");
+Console.WriteLine($"Terceiro: {fraudulentOrderIDs[2]}");
+
+fraudulentOrderIDs[0] = "F000";
+
+Console.WriteLine($"Primeiro reatribuido: {fraudulentOrderIDs[0]}");
+
+Console.WriteLine($"Existem {fraudulentOrderIDs.Length} pedidos fraudulentos em processamento.");
+
+int[] inventory = {200,450,700,175,250};
+int sum = 0;
+int bin = 0;
+
+foreach (int items in inventory){
+    sum += items;
+    bin++;
+    Console.WriteLine($"Compartimenmto {bin} = {items} itens (total atual: {sum})");
+}
+
+Console.WriteLine($"Nós temos {sum} itens em nosso inventário.");
